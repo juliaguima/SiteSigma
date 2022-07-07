@@ -1,12 +1,12 @@
 <?php
-
+include_once './includes/_banco.php';
 include_once './includes/_dados.php';
 include_once './includes/_head.php';
 include_once './includes/_header.php';
 
 ?>
 
-
+ 
 <div class= "container">
    <div class= "row mt-5">     
       
