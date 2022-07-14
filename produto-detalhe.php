@@ -18,8 +18,15 @@ $tipo = $_GET['tipo'];
               </div>
              </div>
              <div class="row"> 
-            <div class="col">Voltar</div>
-          <div class="col">Comprar</div>
+            <div class="col">
+            <a href="produto-detalhe.php?id=<?php echo $key;?>&tipo=promocao" class="btn btn-primary">Comprar</a>
+            </div>
+          <div class="col">
+          
+          <a href="produtos.php" class="btn btn-primary">Voltar</a>
+          
+          
+          </div>
         </div>
       </div>
 

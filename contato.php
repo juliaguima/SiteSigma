@@ -2,10 +2,8 @@
 
 // include do footer
 
-include_once './includes/_dados.php';
-
+include_once './includes/_banco.php';
 include_once './includes/_head.php';
-
 include_once './includes/_header.php';
 
 
@@ -13,15 +11,10 @@ include_once './includes/_header.php';
 if (isset ( $_POST['txtNome']) ) {
 
     $nome = strtoupper( $_POST['txtNome']);
-
     $nome = $_POST['txtNome'];
-
     $email = $_POST['txtEmail'];
-
     $telefone = $_POST['txtTelefone'];
-
     $mensagem = $_POST['txtMensagem'];
-
     echo $nome. "<br>". $email."<br>". $telefone."<br>". $mensagem;
 
 }
@@ -35,20 +28,23 @@ if (isset ( $_POST['txtNome']) ) {
 <ul>
  <li>
  <label for="txtNome">Nome Completo</label>
+ </br>
 <input type="text" name="txtNome" id="txtNome">
  </li>
 <li>
  <label for="txtEmail">E-mail</label>
+</br>
  <input type="text" name="txtEmail" id="txtEmail">
 </li>
 <li>
  <label for="txtTelefone">Telefone</label>
+ </br>
 <input type="text" name="txtTelefone" id="txtTelefone">
 </li>
 <li>
 
 <label for="txtMensagem">Mensagem</label>
-
+</br>
         <input type="text" name="txtMensagem" id="txtMensagem">
 
         </li>

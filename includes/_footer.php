@@ -24,3 +24,10 @@
 </body>
 
 </html>
+
+<?php
+
+//fecha a conexão data base
+ mysqli_close($conn);
+
+?>

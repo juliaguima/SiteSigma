@@ -1,6 +1,5 @@
 <?php
 include_once './includes/_banco.php';
-include_once './includes/_dados.php';
 include_once './includes/_head.php';
 include_once './includes/_header.php';
 
@@ -9,7 +8,27 @@ include_once './includes/_header.php';
  
 <div class= "container">
    <div class= "row mt-5">     
-      
+
+  <?php
+
+  // variável com SQL executado
+    $sql = "SELECT * FROM categorias WHERE Ativo = 1";
+
+  // executa o comando nessa conexão 
+    $exec = mysqli_query($conn,$sql);
+
+  // Informa a quantidade de registros de dados
+    $numProdutos = mysqli_num_rows($exec);
+
+  //percorre o banco de dados
+    while ($dados = mysqli_fetch_assoc($exec) ) {
+ 
+      echo '<h1>'.$dados['Nome'].'</h1>';
+
+    }
+  ?>
+
+
      
      <?php
      //repetição; 3 primeiros produtos
