@@ -16,10 +16,10 @@ include_once "./_menu.php";
 
 <main>
 
-<h2>Administração de categorias</h2>
-<a href="categoria-salvar.php">Inserir</a>
+<h2  style= "font-size:30px; text-align:center">Administração de categorias</h2>
+<p style= "text-align:center" ><a href="categoria-salvar.php">Inserir</a></p>
     <hr>
-   <table border="1";>
+   <table  border="5";>
     <tr>
         <th>ID</th>
         <th>Nome</th>
