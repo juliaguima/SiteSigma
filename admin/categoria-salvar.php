@@ -12,7 +12,7 @@ if(isset($_GET['id']) || !empty($_GET['id'])){
 }else{
     $id = '';
     $dados ['Nome'] = '';
-    $dados['descricao'] = '';
+    $dados['Descricao'] = '';
 
 }
 include_once './_menu.php'
@@ -28,7 +28,7 @@ include_once './_menu.php'
     <label for="nome">Nome:</label><br>
     <input type="text" id="nome" name="nome" value="<?php echo $dados ['Nome'];?>"><br>
     <label for="nome">Descrição:</label><br>
-    <textarea id="descricao" name="descricao"><?php echo $dados ['descricao'];?></textarea></br>
+    <textarea id="descricao" cols="30" rows="10"name="descricao"><?php echo $dados ['Descricao'];?></textarea></br>
     <hr>
     <input type="submit" value="Enviar">
  </form>

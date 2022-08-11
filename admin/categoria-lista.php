@@ -2,6 +2,7 @@
 <?php 
 include_once "../includes/_banco.php";
 include_once "./_header.php";
+include_once '_valida.php';
 
 $sql = "SELECT * from categorias";
 
@@ -19,11 +20,11 @@ include_once "./_menu.php";
 <h2  style= "font-size:30px; text-align:center">Administração de categorias</h2>
 <p style= "text-align:center" ><a href="categoria-salvar.php">Inserir</a></p>
     <hr>
-   <table  border="5";>
+   <table style="background-color: #E5E4E2;" border="5";>
     <tr>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Ações</th>
+        <th style="background-color: grey;">ID</th>
+        <th style="background-color: grey;">Nome</th>
+        <th style="background-color: grey;">Ações</th>
     </tr>
 <?php
 if ($resultado){
@@ -36,7 +37,7 @@ while ($dado = mysqli_fetch_array($resultado)){
 <tr>
 
 <td><?php echo $dado ['CategoriaID'];?></td>
-<td><a href="categoria-salvar.php?acao=salvar&id=<?php echo $dado ['CategoriaID'];?>"><?php echo $dado ['Nome'];?></a></td>
+<td style="text-align:center;"><a href="categoria-salvar.php?acao=salvar&id=<?php echo $dado ['CategoriaID'];?>"><?php echo $dado ['Nome'];?></a></td>
 <td><a href="categoria-processa.php?acao=excluir&id=<?php echo $dado ['CategoriaID'];?>">Excluir</a></td>
 </tr>
 
