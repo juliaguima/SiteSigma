@@ -1,10 +1,9 @@
 <?php 
 
 session_start();
-include_once '../includes/_dados.php';
+include_once '../includes/_banco.php';
 
 $acao = $_REQUEST['acao'];
-
 
 switch ($acao) {
 
@@ -23,7 +22,6 @@ case 'login';
     $dados = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
 
     if (!empty($dados)) {
-        
         $_SESSION['LOGIN'] = array('Nome' =>$dados['Nome']);
         header('location: ./index.php');
     
