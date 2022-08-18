@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14-Jul-2022 às 17:27
+-- Tempo de geração: 18-Ago-2022 às 17:22
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 7.3.27
 
@@ -38,7 +38,7 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`CategoriaID`, `Nome`, `Ativo`) VALUES
-(1, 'Animais', 1),
+(1, 'Animais', 0),
 (2, 'Flores', 1),
 (3, 'Gatinhos', 1),
 (4, 'Dogs', 1),
@@ -48,7 +48,8 @@ INSERT INTO `categorias` (`CategoriaID`, `Nome`, `Ativo`) VALUES
 (8, 'Terrestres', 1),
 (9, 'Brasileiros', 1),
 (10, 'Estrangeiros', 1),
-(11, 'Capivaras', 1);
+(11, 'Capivaras', 0),
+(12, 'Peixes', 0);
 
 -- --------------------------------------------------------
 
@@ -102,6 +103,26 @@ INSERT INTO `produtos` (`ProdutoID`, `Nome`, `Descricao`, `Imagem`, `Preco`, `At
 (28, 'Tartaruga', 'Tartaruga', 'turtle.webp', 2000, 1, 0),
 (29, 'Zebra sorridente', 'Zebra sorridente', 'zebrinha.webp', 12000, 1, 0);
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `usuarioID` int(10) UNSIGNED NOT NULL,
+  `Nome` varchar(45) NOT NULL DEFAULT '',
+  `Email` varchar(45) NOT NULL DEFAULT '',
+  `Senha` varchar(45) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`usuarioID`, `Nome`, `Email`, `Senha`) VALUES
+(3, 'Júlia', 'julia@gmail.com', '777');
+
 --
 -- Índices para tabelas despejadas
 --
@@ -119,6 +140,12 @@ ALTER TABLE `produtos`
   ADD PRIMARY KEY (`ProdutoID`);
 
 --
+-- Índices para tabela `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`usuarioID`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -126,13 +153,19 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `CategoriaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `CategoriaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
   MODIFY `ProdutoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT de tabela `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `usuarioID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
