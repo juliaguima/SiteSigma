@@ -28,9 +28,9 @@ include_once './_menu.php';
     <input type="text" value="salvar" name="acao">
     <input type="text" name="id" value="<?php echo $id;?>"><br>
     <label for="nome">Nome:</label><br>
-    <input type="text" id="nome" name="nome" value="<?php echo $dados ['Nome'];?>"><br>
+    <input type="text" id="nome" name="nome" value="<?php echo $dados['Nome'];?>"><br>
     <label for="nome">Descrição:</label><br>
-    <textarea id="descricao" cols="30" rows="10"name="descricao"><?php echo $dados ['Descricao'];?></textarea></br>
+    <textarea id="descricao" cols="30" rows="10"name="descricao"><?php echo $dados['Descricao'];?></textarea></br>
     <hr>
     <input type="submit" value="Enviar">
  </form>

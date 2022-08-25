@@ -22,8 +22,9 @@ case 'login';
     $dados = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
 
     if (!empty($dados)) {
+
         $_SESSION['LOGIN'] = array('Nome' =>$dados['Nome']);
-        header('location: ./index.php');
+        header('location: ./categoria-salvar.php');
     
     }else{
         header('location: ./login.php?msg=1');

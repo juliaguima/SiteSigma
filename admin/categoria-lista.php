@@ -4,7 +4,7 @@ include_once "../includes/_banco.php";
 include_once "./_header.php";
 include_once '_valida.php';
 
-$sql = "SELECT * from categorias";
+$sql = "SELECT * from categorias WHERE Ativo = 1";
 $resultado = mysqli_query($conn, $sql);
 $total = mysqli_num_rows($resultado);
 

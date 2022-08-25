@@ -19,16 +19,16 @@ include_once './_menu.php'
 
 ?>
 <main>
-<h2> Administração das categorias</h2>
-<a href="categoria-lista.php">Listagem</a>
+<h2 style="text-align:center;"> Administração das categorias</h2>
+<a style="text-align:center;" href="categoria-lista.php">Listagem</a>
 <hr>
-<form action="categoria-processa.php" method ="post">
-    <input type="text" value="salvar" name="acao">
-    <input type="text" name="id" value="<?php echo $id;?>"><br>
+<form style="text-align:center;"action="categoria-processa.php" method ="post">
+    <input type="hidden" value="salvar" name="acao" >
+    <input type="hidden" name="id" value="<?php echo $id;?>"><br>
     <label for="nome">Nome:</label><br>
-    <input type="text" id="nome" name="nome" value="<?php echo $dados ['Nome'];?>"><br>
+    <input type="text" id="nome" name="nome" value="<?php echo $dados['Nome'];?>"><br>
     <label for="nome">Descrição:</label><br>
-    <textarea id="descricao" cols="30" rows="10"name="descricao"><?php echo $dados ['Descricao'];?></textarea></br>
+    <textarea id="descricao" name="descricao"><?php echo $dados['Descricao'];?></textarea></br>
     <hr>
     <input type="submit" value="Enviar">
  </form>

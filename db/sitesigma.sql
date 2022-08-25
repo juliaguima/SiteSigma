@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18-Ago-2022 às 17:22
+-- Tempo de geração: 25-Ago-2022 às 17:13
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 7.3.27
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `categorias` (
   `CategoriaID` int(11) NOT NULL,
   `Nome` varchar(100) NOT NULL,
+  `Descricao` longtext NOT NULL,
   `Ativo` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -37,19 +38,21 @@ CREATE TABLE `categorias` (
 -- Extraindo dados da tabela `categorias`
 --
 
-INSERT INTO `categorias` (`CategoriaID`, `Nome`, `Ativo`) VALUES
-(1, 'Animais', 0),
-(2, 'Flores', 1),
-(3, 'Gatinhos', 1),
-(4, 'Dogs', 1),
-(5, 'Passaros', 1),
-(6, 'Macacos', 0),
-(7, 'Aquaticos', 1),
-(8, 'Terrestres', 1),
-(9, 'Brasileiros', 1),
-(10, 'Estrangeiros', 1),
-(11, 'Capivaras', 0),
-(12, 'Peixes', 0);
+INSERT INTO `categorias` (`CategoriaID`, `Nome`, `Descricao`, `Ativo`) VALUES
+(1, 'Animais', '', 1),
+(2, 'Flores', '', 1),
+(3, 'Gatinhos', '', 1),
+(4, 'Dogs', '', 1),
+(5, 'Passaros', '', 1),
+(6, 'Macacos', '', 0),
+(7, 'Aquaticos', '', 1),
+(8, 'Terrestres', '', 1),
+(9, 'Brasileiros', '', 1),
+(10, 'Estrangeiros', '', 1),
+(11, 'Capivaras', '', 1),
+(12, 'Peixes', '', 1),
+(17, 'Macacos', '', 1),
+(18, 'Celular2', '', 0);
 
 -- --------------------------------------------------------
 
@@ -121,7 +124,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`usuarioID`, `Nome`, `Email`, `Senha`) VALUES
-(3, 'Júlia', 'julia@gmail.com', '777');
+(1, 'Júlia', 'julia@gmail.com', '777');
 
 --
 -- Índices para tabelas despejadas
@@ -153,7 +156,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `CategoriaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `CategoriaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
